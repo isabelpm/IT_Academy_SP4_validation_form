@@ -1,0 +1,133 @@
+/*********** CSS MENÚ ***********/
+
+
+/* Quita el padding del contenedor */
+.container-fluid {
+    padding: 0px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23c1e1db' fill-opacity='0.05'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Quita el borde del jumbotron */
+.jumbotron {
+    border-radius: 0;
+    margin-bottom: 0;
+    background-color: #00b894;
+}
+
+/* Ocupa el espacio al 100% */
+.col-md-12 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* He modificado el row -15px de bs4 ya que nos daba espacio en el lateral y scroball */
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/* añado padding al main */
+.main {
+    padding: 0px;
+}
+
+/* .nav-link .logo .img-fluid {
+    width: 100%;
+    height: auto;
+    padding: 20px
+    
+} */
+.botones_principales {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.botones_principales,
+.home-user {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.menu-posicion {
+    justify-content: flex-end;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+
+}
+
+
+.title h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #28a745;
+}
+
+/* Titles for each text box , ex "First name, Email, Password,etc" */
+.form-group {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+
+
+
+/*FOOTER*/
+
+.informacio {
+    /*Flexbox*/
+    display: flex;
+    flex-flow: nowrap;
+
+    /*se amolda espacio existente, sin salto de linia*/
+    justify-content: center;
+    align-items: baseline;
+
+    /*CSS*/
+    text-align: center;
+    /* margin: 15px 15px 15px 15px; */
+    list-style: inside;
+    color: black;
+}
+
+.informacio ul {
+    margin: 0px;
+    padding: 15px;
+    align-items: baseline;
+    /*css*/
+    list-style: none;
+    text-align: center;
+
+
+}
+
+.informacio .titol {
+    font-weight: 400;
+
+}
+
+.informacio a {
+    color: black;
+
+}
+
+
+
+
+/* --------------------------- RESPONSIVE CSS --------------------------- */
+
+@media (min-width: 800px) {
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+}
