@@ -1,6 +1,3 @@
-/*********** CSS MENÚ ***********/
-
-
 /* Quita el padding del contenedor */
 .container-fluid {
     padding: 0px;
@@ -16,11 +13,10 @@
 
 /* Ocupa el espacio al 100% */
 .col-md-12 {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
-/* He modificado el row -15px de bs4 ya que nos daba espacio en el lateral y scroball */
 .row {
     margin-right: 0px;
     margin-left: 0px;
@@ -31,12 +27,7 @@
     padding: 0px;
 }
 
-/* .nav-link .logo .img-fluid {
-    width: 100%;
-    height: auto;
-    padding: 20px
-    
-} */
+
 .botones_principales {
     display: flex;
     justify-content: flex-start;
@@ -61,6 +52,12 @@
 
 }
 
+/* caja títulos: nombre, email, contraseña.... */
+.form-group {
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 5px;
+}
 
 .title h1 {
     font-weight: 700;
@@ -69,11 +66,7 @@
     color: #28a745;
 }
 
-/* Titles for each text box , ex "First name, Email, Password,etc" */
-.form-group {
-    font-weight: 700;
-    font-size: 1rem;
-}
+
 
 
 
