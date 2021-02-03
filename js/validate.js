@@ -35,10 +35,14 @@ function registerValidate() {
     }
 }
 
+
 // --------------------------------- APARTADO REGISTRO --------------------------------- //
 
 function registerValidate2() {
     let acumErrores2 = 0;
+    // El botón onsubmit siempre actualiza la página cuando hacemos clic en él, el "event.preventDefault ();" detiene esta actualización y muestra todas las validaciones"
+    event.preventDefault();
+
     // El botón onsubmit siempre actualiza la página cuando hacemos clic en él, el "event.preventDefault ();"detiene esta actualización y muestra todas las validaciones"    event.preventDefault();
     form2.classList.remove('is-invalid');
 
@@ -158,7 +162,6 @@ function registerValidate2() {
         return true;
     }
 }
-
 
 // ARROW FUNCTION
 form.addEventListener('blur', (event) => {
