@@ -7,14 +7,14 @@
 .container-fluid h1,
 h2,
 h3 {
-    color: #28a745;
+    color: #198754;
 }
 
 /* Quita el borde del jumbotron */
 .jumbotron {
     border-radius: 0;
     margin-bottom: 0;
-    background-color: #00b894;
+    background-color: #198754;
 }
 
 /* Ocupa el espacio al 100% */
@@ -33,38 +33,21 @@ h3 {
 .main {
     padding: 0px;
 }
-
-/* .nav-link .logo .img-fluid {
-    width: 100%;
-    height: auto;
-    padding: 20px
-    
-} */
-.botones_principales {
-    display: flex;
-    justify-content: flex-start;
-  
-}
-.botones_principales, .home-user{
-     display: flex;
-     justify-content: flex-start;
-    
+/* NAV */
+.navbar {
+  margin: 0px 12px 00px 0px;
 }
 
-.menu-posicion {
-    justify-content: flex-end;
+
+/* BUSCADOR */
+.invalid-feedback,
+.form-check-input {
+    color: red !important;
+    font-size:0.8em;
 }
 
-.nav-link {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-   
-}
-
-:hover .nav-link {
-   color: red;
-
+.d-block #errorSearch {
+    margin-top: 5px !important;
 }
 
 
@@ -123,7 +106,6 @@ h3 {
 
 
 /*FOOTER*/
-
 .informacio {
     /*Flexbox*/
     display: flex;
@@ -152,12 +134,13 @@ h3 {
 }
 
 .informacio .titol {
-    font-weight: 400;
-
+    font-weight: 600;
+    color: #198754
 }
 
 .informacio a {
-    color: black;
+    color: #198754;
+    list-style: none;
 
 }
 

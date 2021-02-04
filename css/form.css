@@ -27,30 +27,11 @@
     padding: 0px;
 }
 
-
-.botones_principales {
-    display: flex;
-    justify-content: flex-start;
-
+.navbar {
+    margin: 0px 12px 0px 12px;
 }
 
-.botones_principales,
-.home-user {
-    display: flex;
-    justify-content: flex-start;
 
-}
-
-.menu-posicion {
-    justify-content: flex-end;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-
-}
 
 /* Titles for each form "Login and Register" */
 .title h1 {
@@ -58,7 +39,7 @@
     justify-content: center;
     font-weight: 700;
     font-size: 1.2rem;
-    color:#28a745;  
+    color:#198754;
 }
 
 /* No margin between title and the text box */
@@ -80,11 +61,10 @@
     font-size: 0.8rem;
 }
 
-
 /* Button colors*/
 .submit button,
 .register button {
-    background-color: #28a745;
+    background-color: #198754;
     color: #ffff;
 
 }
@@ -113,16 +93,12 @@
     margin-top: 80px;
 }
 
-
-
-
 /*FOOTER*/
 
 .informacio {
     /*Flexbox*/
     display: flex;
     flex-flow: nowrap;
-    padding: 10px 10px 10px 10px;
 
     /*se amolda espacio existente, sin salto de linia*/
     justify-content: center;
@@ -147,16 +123,15 @@
 }
 
 .informacio .titol {
-    font-weight: 400;
-
+    font-weight: 600;
+    color: #198754
 }
 
 .informacio a {
-    color: black;
+    color: #198754;
+    list-style: none;
 
 }
-
-
 
 
 /* --------------------------- RESPONSIVE CSS --------------------------- */
