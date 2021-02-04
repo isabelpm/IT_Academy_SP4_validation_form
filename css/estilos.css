@@ -62,6 +62,11 @@ h3 {
    
 }
 
+:hover .nav-link {
+   color: red;
+
+}
+
 
 /* --------CAROUSEL---------*/
 

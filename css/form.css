@@ -52,21 +52,66 @@
 
 }
 
-/* caja títulos: nombre, email, contraseña.... */
+/* Titles for each form "Login and Register" */
+.title h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color:#28a745;  
+}
+
+/* No margin between title and the text box */
+.form-group label {
+    margin: 0px;
+}
+
+/* Titles for each text box , ex "First name, Email, Password,etc" */
 .form-group {
     font-weight: 700;
     font-size: 0.9rem;
-    padding: 5px;
+    padding: 8px;
+    
 }
 
-.title h1 {
+/* Titles for the check label texts*/
+.form-check-label {
     font-weight: 700;
-    font-size: 1.2rem;
-    text-align: center;
-    color: #28a745;
+    font-size: 0.8rem;
 }
 
 
+/* Button colors*/
+.submit button,
+.register button {
+    background-color: #28a745;
+    color: #ffff;
+
+}
+
+.forgot1,
+.forgot2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.forgot2 a {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+/* Responsive margins */
+.topmargin-xs {
+    margin-top: 50px;
+}
+
+.topmargin-sm {
+    margin-top: 60px;
+}
+
+.topmargin-lg {
+    margin-top: 80px;
+}
 
 
 
@@ -77,6 +122,7 @@
     /*Flexbox*/
     display: flex;
     flex-flow: nowrap;
+    padding: 10px 10px 10px 10px;
 
     /*se amolda espacio existente, sin salto de linia*/
     justify-content: center;

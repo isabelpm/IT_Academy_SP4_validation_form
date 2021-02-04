@@ -2,157 +2,144 @@ const form = document.getElementById('myFormId');
 const form2 = document.getElementById('myFormId2');
 
 
-// --------------------------------- APARTADO LOGIN --------------------------------- //
 function registerValidate() {
     let acumErrores = 0;
-    // El botón onsubmit siempre actualiza la página cuando hacemos clic en él, el "event.preventDefault ();" detiene esta actualización y muestra todas las validaciones"
+    // The onsubmit button always refresh the page when we click on it, the "event.preventDefault();" stops this refresh and show up all the validations"
     event.preventDefault();
 
     form.classList.remove('is-invalid');
 
-    // Variables del login
+    // Login variables
     let inputEmail1 = document.getElementById('inputEmail1');
     let inputPassword1 = document.forms["myForm"]["inputPassword1"];
 
 
-    // Validación Login
+    // Login validation
     // Email 
     if (inputEmail1.value == "") {
         inputEmail1.classList.add("is-invalid");
-        document.getElementById("errorEmail1").textContent = "Si us plau posa el teu mail";
+        document.getElementById("errorEmail1").textContent = "Si us plau introdueix un mail";
         acumErrores++;
     } else if (!validar_email(inputEmail1.value)) {
         inputEmail1.classList.add("is-invalid");
-        document.getElementById("errorEmail1").textContent = "Email no és correcte";
+        document.getElementById("errorEmail1").textContent = "Email incorrecte";
         acumErrores++;
     }
 
-    // Contraseña 
+    // Password 
     if (inputPassword1.value == "") {
         inputPassword1.classList.add("is-invalid");
-        document.getElementById("errorPassword1").textContent = "Si us plau posa la teva contrasenya";
+        document.getElementById("errorPassword1").textContent = "Si us plau introdueix la contrasenya";
         acumErrores++;
     }
 }
 
-
-// --------------------------------- APARTADO REGISTRO --------------------------------- //
-
 function registerValidate2() {
     let acumErrores2 = 0;
-    // El botón onsubmit siempre actualiza la página cuando hacemos clic en él, el "event.preventDefault ();" detiene esta actualización y muestra todas las validaciones"
+    // The onsubmit button always refresh the page when we click on it, the "event.preventDefault();" stops this refresh and show up all the validations"
     event.preventDefault();
-
-    // El botón onsubmit siempre actualiza la página cuando hacemos clic en él, el "event.preventDefault ();"detiene esta actualización y muestra todas las validaciones"    event.preventDefault();
     form2.classList.remove('is-invalid');
 
-    // Variables del apartado registro
+    // Resgister variables
     let inputfirstName = document.getElementById('inputfirstName');
     let inputlastName = document.forms["myForm2"]["inputlastName"];
     let inputEmail2 = document.getElementById('inputEmail2');
     let inputPassword2 = document.forms["myForm2"]["inputPassword2"];
     let inputconfirmPassword = document.forms["myForm2"]["inputconfirmPassword"];
     let inputPhone = document.forms["myForm2"]["inputPhone"];
-    let inputEntitat = document.forms["myForm2"]["inputEntitat"];
     let inputAddress = document.forms["myForm2"]["inputAddress"];
     let inputProvince = document.forms["myForm2"]["inputProvince"];
     let inputCity = document.forms["myForm2"]["inputCity"];
     let inputZip = document.forms["myForm2"]["inputZip"];
     let inputregister = document.forms["myForm2"]["gridCheck2"];
 
-    // Validación del registro
 
-    // Nombre 
+    // Register validation
+
+    // Name 
     if (inputfirstName.value == "") {
         inputfirstName.classList.add("is-invalid");
-        document.getElementById("errorfirstName").textContent = "Si us plau introdueix el teu nom";
+        document.getElementById("errorfirstName").textContent = "Si us plau introdueix un nom";
         acumErrores2++;
     }
 
-    // Apellido
+    // Last name 
     if (inputlastName.value == "") {
         inputlastName.classList.add("is-invalid");
-        document.getElementById("errorlastName").textContent = "Si us plau introdueix el teu cognom";
+        document.getElementById("errorlastName").textContent = "Si us plau introdueix un cognom";
         acumErrores2++;
     }
 
     // Email 
     if (inputEmail2.value == "") {
         inputEmail2.classList.add("is-invalid");
-        document.getElementById("errorEmail2").textContent = "Si us plau introdueix el teu mail";
+        document.getElementById("errorEmail2").textContent = "Si us plau introdueix un mail";
         acumErrores2++;
     } else if (!validar_email(inputEmail2.value)) {
         inputEmail2.classList.add("is-invalid");
-        document.getElementById("errorEmail2").textContent = "Email és incorrecte";
+        document.getElementById("errorEmail2").textContent = "Email es incorrecte";
         acumErrores2++;
     }
 
-    // Contraseña
+    // Password
     if (inputPassword2.value == "") {
         inputPassword2.classList.add("is-invalid");
         document.getElementById("errorPassword2").textContent = "Si us plau introdueix la contrasenya";
         acumErrores2++;
     }
 
-    // Confirmació de contrasenya
+    // Password confirmation
     if (inputPassword2.value == "") {
         inputconfirmPassword.classList.add("is-invalid");
         document.getElementById("errorconfirmPassword").textContent = "Si us plau introdueix la contrasenya";
         acumErrores2++;
     }
-    // Si la confirmación de la contraseña no es la misma que la contraseña
+    // If the password confirmation is not the same as the password
     if (inputconfirmPassword != inputPassword2.value) {
         inputconfirmPassword.classList.add("is-invalid");
-        document.getElementById("errorconfirmPassword").textContent = "La contrasenya no es la mateixa";
+        document.getElementById("errorconfirmPassword").textContent = "La contrasenya es incorrecte";
         acumErrores2++;
     }
 
-    // Telèfon
+    // Phone
     if (inputPhone.value == "") {
         inputPhone.classList.add("is-invalid");
-        document.getElementById("errorPhone").textContent = "Si us plau introdueix el teu telèfon";
+        document.getElementById("errorPhone").textContent = "Si us plau introdueix un telèfon";
         acumErrores2++;
     }
 
-    // Entitat
-    if (inputEntitat.value == "") {
-        inputEntitat.classList.add("is-invalid");
-        document.getElementById("errorEntitat").textContent = "Si us plau introdueix la teva entitat";
-        acumErrores2++;
-    }
-
-    // Dirección 
+    // Address 
     if (inputAddress.value == "") {
         inputAddress.classList.add("is-invalid");
-        document.getElementById("errorAddress").textContent = "Si us plau introdueix la teva adreça";
+        document.getElementById("errorAddress").textContent = "Si us plau introdueix una adreça";
         acumErrores2++;
     }
 
-    // Provincias 
+    // Province 
     if (inputProvince.value == "") {
         inputProvince.classList.add("is-invalid");
-        document.getElementById("errorProvince").textContent = "Si us plau introdueix la provincia";
+        document.getElementById("errorProvince").textContent = "Si us plau introdueix una provincia";
         acumErrores2++;
     }
 
     // City 
     if (inputCity.value == "") {
         inputCity.classList.add("is-invalid");
-        document.getElementById("errorCity").textContent = "Si us plau introdueix ciutat";
+        document.getElementById("errorCity").textContent = "Si us plau introdueix una ciutat";
         acumErrores2++;
     }
 
-    // CP 
+    // Zip 
     if (inputZip.value == "" || inputZip.length != 5) {
         inputZip.classList.add("is-invalid");
-        document.getElementById("errorZip").textContent = "Si us plau introdueix el Codi postal";
+        document.getElementById("errorZip").textContent = "Si us plau introdueix un Codi postal";
         acumErrores2++;
     }
 
-    // Política privacitat
+    // Privacy Policy 
     if (!gridCheck2.checked) {
         gridCheck2.classList.add("is-invalid");
-        document.getElementById("errorCheck2").textContent = "Acceptes les bases";
+        document.getElementById("errorCheck2").textContent = "Acepta les bases";
         acumErrores2++;
     }
 
@@ -163,7 +150,8 @@ function registerValidate2() {
     }
 }
 
-// ARROW FUNCTION
+
+
 form.addEventListener('blur', (event) => {
     console.log(event);
     if (event.target.value != '') event.target.classList.remove('is-invalid');
@@ -176,7 +164,6 @@ form2.addEventListener('blur', (event) => {
     //registerValidate();
 }, true);
 
-// EXPRESIONES REGULARES
 function validar_email(email) {
     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email) ? true : false;
