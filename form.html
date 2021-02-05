@@ -1,7 +1,9 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <title>FORMS VALIDATION</title>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,269 +25,304 @@
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
         </script>
 
-
-    <!-- Styles CSS -->
+    <!-- CSS Estilos propios -->
     <link rel="stylesheet" href="css/form.css">
 
-    <title>Form Validation</title>
 </head>
 
 <body>
+    <!-- CONTENEDOR PRINCPIPAL -->
+    <div class="container-fluid">
+        <header>
 
-    <header>
-        <!-------------------------------- EMPIEZA EL MENÚ NAVEGACIÓN ---------------------------------------->
+            <!-------------------------------- EMPIEZA EL MENÚ NAVEGACIÓN ---------------------------------------->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Fifth navbar example">
-            <div class="container-fluid col-md-12">
-                <img class="nav-link logo img-fluid" src="imatges/logo_naturafia.png">
-                <!-- BOTÓN BURGER -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="container-fluid col-md-12">
+                    <!-- LOGO -->
+                    <img class="nav-link logo img-fluid" src="imatges/logo_naturafia.png">
 
-                <div class="collapse navbar-collapse" id="navbarsExample05">
+                    <!-- BOTÓN BURGER -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div class="collapse navbar-collapse" id="navbarsExample05">
 
-                        <!-- HOME -->
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-house" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
-                                    <path fill-rule="evenodd"
-                                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
-                                </svg><span class="sr-only"></span></a>
-                        </li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-6">
+                            <!-- HOME -->
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-house" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                                    </svg><span class="sr-only"></span></a>
+                            </li>
 
-                        <!-- LOGIN / REGISTER -->
-                        <li class="nav-item active">
-                            <a class="nav-link" href="form.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-person" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                                </svg><span class="sr-only"></span></a>
-                        </li>
-                        <!-- ITEMS MENU -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Entitats</a>
-                        </li>
+                            <!-- LOGIN -->
+                            <!-- <li class="nav-item active">
+                                <a class="nav-link" href="form.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                    </svg><span class="sr-only"></span></a>
+                            </li> -->
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Esdeveniments</a>
-                        </li>
+                            <!-- REGISTER -->
+                            <li class="nav-item active">
+                                <a class="nav-link" href="form.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-person" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                    </svg><span class="sr-only"></span></a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Tallers</a>
-                        </li>
+                            <!-- ITEMS MENU -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Entitats</a>
+                            </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown"
-                                aria-expanded="false">Galeria</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown05">
-                                <li><a class="dropdown-item" href="#">Fotografies</a></li>
-                                <li><a class="dropdown-item" href="#">Col·laboradors</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Esdeveniments</a>
+                            </li>
 
-                            </ul>
-                        </li>
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Tallers</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Galeria</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown05">
+                                    <li><a class="dropdown-item" href="#">Fotografies</a></li>
+                                    <li><a class="dropdown-item" href="#">Col·laboradors</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- BUSCADOR -->
+                        <div class="search d-flex">
+                            <form class="d-flex p-3" id="mySearch" name="mySearch">
+
+                                <div class="d-flex" id="input_logIn">
+                                    <input class="form-control" id="input_search" type="text" name="input_search">
+                                    <div class="invalid-feedback" id="errorSearch"></div>
+                                </div>
+
+                                <button class="btn btn-outline-success" onclick="return search()" type="button"
+                                    id="button_search">Buscar
+                                </button>
+                                <div class="invalid-feedback" id="errorSearch">
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!---------------------------------- ACABA EL MENÚ NAVEGACIÓN ---------------------------------------->
+        </header>
+
+        <div class="row col-md-12 justify-content-center ">
+
+            <div class="row col-md-4">
+
+                <!-- *************** Log in validation ***************  -->
+                <div class="container-fluid topmargin-xs bottommargin-xs">
+
+                    <form method="POST" id="myFormId" onsubmit="return registerValidate()" name="myForm">
+
+                        <div class="form-row">
+                            
+                            <!-- Title -->
+                            <div class=" title row col-md-12 ">
+                                <h3>LOGIN</h3>
+                            </div>
+                            
+                            <!-- Email Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail1">Email</label>
+                                <input type="text" name="inputEmail" class="form-control" id="inputEmail1">
+                                <div class="invalid-feedback" id="errorEmail1"></div>
+                            </div>
+
+                            <!-- Password Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputPassword1">Contrasenya</label>
+                                <input type="password" name="inputPassword1" class="form-control" id="inputPassword1">
+                                <div class="invalid-feedback" id="errorPassword1"></div>
+                            </div>
+
+                            <!-- Remember me Validation -->
+                            <div class="form-group col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                    <label class="form-check-label" for="gridCheck1">Recorda'm</label>
+                                    <div class="invalid-feedback" id="errorCheck1"></div>
+                                </div>
+                            </div>
+
+                            <!-- Log in Button -->
+                            <div class="register form-group col-md-12">
+                                <button type="submit" class="btn btn-success w-100">Entrar</button>
+                            </div>
+
+                            <!-- Forgot password -->
+                            <div class="forgot1 form-group col-md-12">
+                                <p>Has oblidat la contrasenya?</p>
+                            </div>
+
+                        </div>
+                    </form>
                 </div>
             </div>
-        </nav>
 
-        <!-------------------------------- ACABA EL MENÚ NAVEGACIÓN ------------------------------------------>
-    </header>
+            <!-- *************** Register validation ***************  -->
+            <div class="row col-md-4 m-b-5">
+                <div class="container-fluid topmargin-xs bottommargin-xs">
 
-    <div class="row col-md-12 justify-content-center">
+                    <form id="myFormId2" onsubmit="registerValidate2()" name="myForm2">
 
-        <div class="row col-md-4">
+                        <div class="form-row col-md-12">
 
-            <!-- *************** Log in validation ***************  -->
-            <div class="container topmargin-xs bottommargin-xs">
+                            <!-- Title -->
+                            <div class="title row col-md-12 justify-content-center">
+                                <h3>REGISTRE'T</h3>
+                            </div>
 
-                <form id="myFormId" onsubmit="registerValidate()" name="myForm">
+                            <!-- Name Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputfirstName">Nom</label>
+                                <input type="text" name="inputfirstName" class="form-control" id="inputfirstName">
+                                <div class="invalid-feedback" id="errorfirstName"></div>
+                            </div>
 
-                    <div class="form-row col-md-12">
-                        <!-- Title -->
-                        <div class=" title row col-md-12 ">
-                            <h1>LOGIN</h1>
-                        </div>
-                        <!-- Email Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputEmail1">Email</label>
-                            <input type="text" name="inputEmail" class="form-control" id="inputEmail1">
-                            <div class="invalid-feedback" id="errorEmail1"></div>
-                        </div>
+                            <!-- Surname Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputlastName">Cognom</label>
+                                <input type="text" name="inputlastName" class="form-control" id="inputlastName">
+                                <div class="invalid-feedback" id="errorlastName"></div>
+                            </div>
 
-                        <!-- Password Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputPassword1">Contrasenya</label>
-                            <input type="password" name="inputPassword1" class="form-control" id="inputPassword1">
-                            <div class="invalid-feedback" id="errorPassword1"></div>
-                        </div>
+                            <!-- Email Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail2">Email</label>
+                                <input type="text" name="inputEmail2" class="form-control" id="inputEmail2">
+                                <div class="invalid-feedback" id="errorEmail2"></div>
+                            </div>
 
-                        <!-- Remember me Validation -->
-                        <div class="form-group col-md-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">Recorda'm</label>
-                                <div class="invalid-feedback" id="errorCheck1"></div>
+                            <!-- Password Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputPassword2">Contrasenya</label>
+                                <input type="password" name="inputPassword2" class="form-control" id="inputPassword2">
+                                <div class="invalid-feedback" id="errorPassword2"></div>
+                            </div>
+
+                            <!-- Confirm Password Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputconfirmPassword">Confirmar contrasenya</label>
+                                <input type="password" name="inputconfirmPassword" class="form-control"
+                                    id="inputconfirmPassword">
+                                <div class="invalid-feedback" id="errorconfirmPassword"></div>
+                            </div>
+
+                            <!-- Phone number Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputPhone">Telèfon mòbil</label>
+                                <input type="password" name="inputPhone" class="form-control" id="inputPhone">
+                                <div class="invalid-feedback" id="errorPhone"></div>
+                            </div>
+
+                            <!-- Address Validation -->
+                            <div class="form-group col-md-12">
+                                <label for="inputAddress">Adreça</label>
+                                <input type="text" class="form-control" id="inputAddress">
+                                <div class="invalid-feedback" id="errorAddress"></div>
                             </div>
                         </div>
 
-                        <!-- Log in Button -->
-                        <div class="register form-group col-md-12">
-                            <button type="submit" class="btn btn-block w-100">Entrar</button>
-                        </div>
+                        <!-- Drop down menu Validation -->
+                        <div class="form-row col-md-12">
+                            <div class="form-group col-md-12">
+                                <label for="inputProvince">Provincia</label>
+                                <select id="inputProvince" class="form-control">
+                                    <option selected value=""></option>
+                                    <option>Barcelona</option>
+                                    <option>Girona</option>
+                                    <option>Tarragona</option>
+                                    <option>Lleida</option>
+                                </select>
+                                <div class="invalid-feedback" id="errorProvince"></div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputCity">Ciutat</label>
+                                <input type="text" class="form-control" id="inputCity">
+                                <div class="invalid-feedback" id="errorCity"></div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputZip">Codi postal</label>
+                                <input type="text" class="form-control" id="inputZip">
+                                <div class="invalid-feedback" id="errorZip"></div>
+                            </div>
 
-                        <!-- Forgot password -->
-                        <div class="forgot1 form-group col-md-12">
-                            <p>Has oblidat la contrasenya?</p>
-                        </div>
+                            <!-- Privacy Validation -->
+                            <div class="form-group col-md-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                    <label for="inputregister" class="form-check-label" for="gridCheck2">
+                                        Jo he llegit i acepto la política de privacitat
+                                    </label>
+                                    <div class="invalid-feedback" id="errorCheck2"></div>
+                                </div>
+                            </div>
 
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <!-- *************** Register validation ***************  -->
-        <div class="row col-md-4 m-b-5">
-            <div class="container topmargin-xs">
-
-                <form id="myFormId2" onsubmit="registerValidate2()" name="myForm2">
-
-                    <div class="form-row col-md-12">
-
-                        <!-- Title -->
-                        <div class="title row col-md-12 justify-content-center">
-                            <h1>REGISTRE'T</h1>
-                        </div>
-
-                        <!-- Name Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputfirstName">Nom</label>
-                            <input type="text" name="inputfirstName" class="form-control" id="inputfirstName">
-                            <div class="invalid-feedback" id="errorfirstName"></div>
-                        </div>
-
-                        <!-- Surname Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputlastName">Cognom</label>
-                            <input type="text" name="inputlastName" class="form-control" id="inputlastName">
-                            <div class="invalid-feedback" id="errorlastName"></div>
-                        </div>
-
-                        <!-- Email Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputEmail2">Email</label>
-                            <input type="text" name="inputEmail2" class="form-control" id="inputEmail2">
-                            <div class="invalid-feedback" id="errorEmail2"></div>
-                        </div>
-
-                        <!-- Password Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputPassword2">Contrasenya</label>
-                            <input type="password" name="inputPassword2" class="form-control" id="inputPassword2">
-                            <div class="invalid-feedback" id="errorPassword2"></div>
-                        </div>
-
-                        <!-- Confirm Password Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputconfirmPassword">Confirmar contrasenya</label>
-                            <input type="password" name="inputconfirmPassword" class="form-control"
-                                id="inputconfirmPassword">
-                            <div class="invalid-feedback" id="errorconfirmPassword"></div>
-                        </div>
-
-                        <!-- Phone number Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputPhone">Telèfon mòbil</label>
-                            <input type="password" name="inputPhone" class="form-control" id="inputPhone">
-                            <div class="invalid-feedback" id="errorPhone"></div>
-                        </div>
-
-                        <!-- Address Validation -->
-                        <div class="form-group col-md-12">
-                            <label for="inputAddress">Adreça</label>
-                            <input type="text" class="form-control" id="inputAddress">
-                            <div class="invalid-feedback" id="errorAddress"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Drop down menu Validation -->
-                    <div class="form-row col-md-12">
-                        <div class="form-group col-md-12">
-                            <label for="inputProvince">Provincia</label>
-                            <select id="inputProvince" class="form-control">
-                                <option selected value=""></option>
-                                <option>Barcelona</option>
-                                <option>Girona</option>
-                                <option>Tarragona</option>
-                                <option>Lleida</option>
-                            </select>
-                            <div class="invalid-feedback" id="errorProvince"></div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="inputCity">Ciutat</label>
-                            <input type="text" class="form-control" id="inputCity">
-                            <div class="invalid-feedback" id="errorCity"></div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="inputZip">Codi postal</label>
-                            <input type="text" class="form-control" id="inputZip">
-                            <div class="invalid-feedback" id="errorZip"></div>
-                        </div>
-
-                        <!-- Privacy Validation -->
-                        <div class="form-group col-md-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck2">
-                                <label class="form-check-label" for="gridCheck2">
-                                    Jo he llegit i acepto la política de privacitat
-                                </label>
-                                <div class="invalid-feedback" id="errorCheck2"></div>
+                            <!-- Submit Button -->
+                            <div class="submit form-group col-md-12">
+                                <button type="submit" class="btn btn-success w-100">Registrar-me</button>
                             </div>
                         </div>
-
-                        <!-- Submit Button -->
-                        <div class="submit form-group col-md-12">
-                            <button type="submit" class="btn btn-block w-100">Registrar-me</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
+
+
+        <!----------------------------------------- EMPIEZA EL FOOTER ------------------------------------------->
+        <footer class="footer bg-light topmargin-xs ">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="informacio">
+                        <ul>
+                            <li class="titol">NOSALTRES</li>
+                            <li><a href="#">Contacta'ns</a></li>
+                            <li><a href="#">Estat de la compra</a></li>
+                        </ul>
+                        <ul>
+                            <li class="titol">MÉS INFORMACIÓ</li>
+                            <li><a href="#">Privacitat</a></li>
+                            <li><a href="#">Avís legal</a></li>
+                            <li><a href="#">Política de cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------- ACABA EL FOOTER --------------------------------------------->
     </div>
 
-    <!--FOOTER-->
-    <footer class="footer bg-light topmargin-xs ">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="informacio">
-                    <ul>
-                        <li class="titol">NOSALTRES</li>
-                        <li><a href="#">Contacta'ns</a></li>
-                        <li><a href="#">Estat de la compra</a></li>
-                    </ul>
-                    <ul>
-                        <li class="titol">MÉS INFORMACIÓ</li>
-                        <li><a href="#">Privacitat</a></li>
-                        <li><a href="#">Avís legal</a></li>
-                        <li><a href="#">Política de cookies</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+    <!-- link Javascript formulario y búsqueda -->
     <script src="js/validate.js" type="text/javascript"></script>
     <script src="js/busqueda.js" type="text/javascript"></script>
+
 </body>
 
 </html>

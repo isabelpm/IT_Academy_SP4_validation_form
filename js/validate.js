@@ -1,12 +1,11 @@
+// ******************************** LOGIN ******************************
 const form = document.getElementById('myFormId');
-const form2 = document.getElementById('myFormId2');
-
 
 function registerValidate() {
     let acumErrores = 0;
-    // The onsubmit button always refresh the page when we click on it, the "event.preventDefault();" stops this refresh and show up all the validations"
-    event.preventDefault();
 
+    // // // The onsubmit button always refresh the page when we click on it, the "event.preventDefault();" stops this refresh and show up all the validations"
+    event.preventDefault();
     form.classList.remove('is-invalid');
 
     // Login variables
@@ -32,26 +31,44 @@ function registerValidate() {
         document.getElementById("errorPassword1").textContent = "Si us plau introdueix la contrasenya";
         acumErrores++;
     }
+    if (acumErrores > 0) {
+        return false;
+    } else {
+        return true;
+    }
 }
+
+form.addEventListener('blur', (event) => {
+    console.log(event);
+    if (event.target.value != '') event.target.classList.remove('is-invalid');
+    //registerValidate();
+}, true);
+
+
+
+
+// ******************************** REGISTRER ******************************
+const form2 = document.getElementById('myFormId2');
 
 function registerValidate2() {
     let acumErrores2 = 0;
-    // The onsubmit button always refresh the page when we click on it, the "event.preventDefault();" stops this refresh and show up all the validations"
+    
+    // // The onsubmit button always refresh the page when we click on it, the "event.preventDefault();" stops this refresh and show up all the validations"
     event.preventDefault();
     form2.classList.remove('is-invalid');
 
     // Resgister variables
-    let inputfirstName = document.getElementById('inputfirstName');
-    let inputlastName = document.forms["myForm2"]["inputlastName"];
-    let inputEmail2 = document.getElementById('inputEmail2');
-    let inputPassword2 = document.forms["myForm2"]["inputPassword2"];
-    let inputconfirmPassword = document.forms["myForm2"]["inputconfirmPassword"];
-    let inputPhone = document.forms["myForm2"]["inputPhone"];
-    let inputAddress = document.forms["myForm2"]["inputAddress"];
-    let inputProvince = document.forms["myForm2"]["inputProvince"];
-    let inputCity = document.forms["myForm2"]["inputCity"];
-    let inputZip = document.forms["myForm2"]["inputZip"];
-    let inputregister = document.forms["myForm2"]["gridCheck2"];
+    let inputfirstName         = document.getElementById('inputfirstName');
+    let inputlastName          = document.getElementById('inputlastName');
+    let inputEmail2            = document.getElementById('inputEmail2');
+    let inputPassword2         = document.forms["myForm2"]["inputPassword2"];
+    let inputconfirmPassword   = document.forms["myForm2"]["inputconfirmPassword"];
+    let inputPhone             = document.forms["myForm2"]["inputPhone"];
+    let inputAddress           = document.forms["myForm2"]["inputAddress"];
+    let inputProvince          = document.forms["myForm2"]["inputProvince"];
+    let inputCity              = document.forms["myForm2"]["inputCity"];
+    let inputZip               = document.forms["myForm2"]["inputZip"];
+    let inputregister          = document.forms["myForm2"]["gridCheck2"];
 
 
     // Register validation
@@ -150,19 +167,12 @@ function registerValidate2() {
     }
 }
 
-
-
-form.addEventListener('blur', (event) => {
-    console.log(event);
-    if (event.target.value != '') event.target.classList.remove('is-invalid');
-    //registerValidate();
-}, true);
-
 form2.addEventListener('blur', (event) => {
     console.log(event);
     if (event.target.value != '') event.target.classList.remove('is-invalid');
     //registerValidate();
 }, true);
+
 
 function validar_email(email) {
     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
