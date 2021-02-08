@@ -1,4 +1,9 @@
-// ******************************** LOGIN ******************************
+// SPRINT 4 - EXERCICE FORM VALIDATION
+// LEVEL 1 
+
+
+// =================================== FORM VALIDATION LOGIN ===================================
+
 const form = document.getElementById('myFormId');
 
 function registerValidate() {
@@ -8,24 +13,25 @@ function registerValidate() {
     event.preventDefault();
     form.classList.remove('is-invalid');
 
-    // Login variables
+    // ======= Login variables =======
     let inputEmail1 = document.getElementById('inputEmail1');
     let inputPassword1 = document.forms["myForm"]["inputPassword1"];
 
 
-    // Login validation
-    // Email 
+    // ======= Login validation =======
+
+    // Email validation
     if (inputEmail1.value == "") {
         inputEmail1.classList.add("is-invalid");
         document.getElementById("errorEmail1").textContent = "Si us plau introdueix un mail";
         acumErrores++;
-    } else if (!validar_email(inputEmail1.value)) {
+    } else if (!validarEmail(inputEmail1.value)) {
         inputEmail1.classList.add("is-invalid");
         document.getElementById("errorEmail1").textContent = "Email incorrecte";
         acumErrores++;
     }
 
-    // Password 
+    // Password validation
     if (inputPassword1.value == "") {
         inputPassword1.classList.add("is-invalid");
         document.getElementById("errorPassword1").textContent = "Si us plau introdueix la contrasenya";
@@ -44,10 +50,32 @@ form.addEventListener('blur', (event) => {
     //registerValidate();
 }, true);
 
+// ================== LEVEL 2 ==================
+
+// Use regular expression to make the email / password more secure
+
+function validarEmail(email) {
+    var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email) ? true : false;
+}
 
 
+function validarPassword (inputPassword1){
+    //Debe tener 1 mayúscula, 1 minúscula, 1 número y 8 carácteres cómo mínimo.
+    let invalid = true;
+    const passwordRegex = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/
+    if (passwordRegex.test(inputPassword1)) {
+        invalid = false;
+        console.log('password vàlid')
+    } else {
+        console.log('password incorrecte')
+    }
+    return invalid; //Devolvemos true o false si cumple o no la validación. 
+}
 
-// ******************************** REGISTRER ******************************
+
+// =================================== FORM VALIDATION REGISTRER ===================================
+
 const form2 = document.getElementById('myFormId2');
 
 function registerValidate2() {
@@ -57,7 +85,7 @@ function registerValidate2() {
     event.preventDefault();
     form2.classList.remove('is-invalid');
 
-    // Resgister variables
+    // =================== Resgister variables =========================
     let inputfirstName         = document.getElementById('inputfirstName');
     let inputlastName          = document.getElementById('inputlastName');
     let inputEmail2            = document.getElementById('inputEmail2');
@@ -71,7 +99,7 @@ function registerValidate2() {
     let inputregister          = document.forms["myForm2"]["gridCheck2"];
 
 
-    // Register validation
+    // ======= Registrer validation =======
 
     // Name 
     if (inputfirstName.value == "") {
@@ -92,7 +120,7 @@ function registerValidate2() {
         inputEmail2.classList.add("is-invalid");
         document.getElementById("errorEmail2").textContent = "Si us plau introdueix un mail";
         acumErrores2++;
-    } else if (!validar_email(inputEmail2.value)) {
+    } else if (!validarEmail(inputEmail2.value)) {
         inputEmail2.classList.add("is-invalid");
         document.getElementById("errorEmail2").textContent = "Email es incorrecte";
         acumErrores2++;
@@ -174,7 +202,8 @@ form2.addEventListener('blur', (event) => {
 }, true);
 
 
-function validar_email(email) {
-    var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    return regex.test(email) ? true : false;
-}
+// // Utilizamos expresiones regulares para comprobar que el email introducido es válido
+// function validarEmail(email) {
+//     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+//     return regex.test(email) ? true : false;
+// }

@@ -22,19 +22,14 @@
     margin-left: 0px;
 }
 
-/* añado padding al main */
-.main {
-    padding: 0px;
-}
 
 .navbar {
     margin: 0px 12px 0px 12px;
 }
 
 
-
 /* Titles for each form "Login and Register" */
-.title h1 {
+.title {
     display: flex;
     justify-content: center;
     font-weight: 700;
@@ -44,7 +39,7 @@
 
 /* No margin between title and the text box */
 .form-group label {
-    margin: 0px;
+    margin: 3px;
 }
 
 /* Titles for each text box , ex "First name, Email, Password,etc" */
